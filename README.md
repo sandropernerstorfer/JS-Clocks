@@ -1,2 +1,4 @@
 # JS-Clocks
-Analog &amp; Digital Clock created with HTML, CSS, JavaScript
+Small Analog &amp; Digital Clocks created with HTML, CSS, JavaScript.
+---
+https://js-clocks.netlify.app/
