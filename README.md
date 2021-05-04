@@ -1,2 +1,2 @@
 # JS-Clocks
-analog &amp; digital clock
+Analog &amp; Digital Clock created with HTML, CSS, JavaScript
