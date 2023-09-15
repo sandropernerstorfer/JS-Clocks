@@ -1,9 +1,9 @@
 // ANALOGE UHR
 setInterval(setAnalogClock, 1000);
 
-const secondHand = document.querySelector('#analogSekunde');
+const secondHand = document.querySelector('#analogSecond');
 const minuteHand = document.querySelector('#analogMinute');
-const hourHand = document.querySelector('#analogStunde');
+const hourHand = document.querySelector('#analogHour');
 
 function setAnalogClock(){
     const currentDate = new Date();
@@ -21,10 +21,7 @@ function setRotation(element, rotationRatio){
 
 setAnalogClock();
 
-// ------------------------------------------------------------------------------------- //
-// ------------------------------------------------------------------------------------- //
-// ------------------------------------------------------------------------------------- //
-// ------------------------------------------------------------------------------------- //
+
 
 // DIGITALE UHR
 let appStart = true;
@@ -48,16 +45,16 @@ function setDigitalClock(){
 const secondDots = document.querySelectorAll('.second-dot');
 function secondTick(){
     secondDots.forEach( dot => {
-        dot.classList.toggle('aktiver-balken');
+        dot.classList.toggle('active-column');
     });
 };
 
-const hourElements = document.querySelectorAll('.digital-stunde');
+const hourElements = document.querySelectorAll('.digital-hour');
 const minuteElements = document.querySelectorAll('.digital-minute');
 
 function resetColoring(){
-    document.querySelectorAll('.aktiver-balken').forEach( element => {
-        element.classList.remove('aktiver-balken');
+    document.querySelectorAll('.active-column').forEach( element => {
+        element.classList.remove('active-column');
     });
 };
 
@@ -74,15 +71,13 @@ function colorDigits(digitColumns, time){
 
         schema.forEach( column => {
             column[1].forEach( (bar,i) => {
-                clockDigit.children[column[0]].children[bar].classList.add('aktiver-balken');
+                clockDigit.children[column[0]].children[bar].classList.add('active-column');
             });
-
         });
-
     });
 };
 
-// array mit vorgefertigten INDEX für färbung
+// coloring schemas for every digit
 const numberSchema = [
 /* 0 */ [[0,[0,1]],[1,[0,2]],[2,[0,1]]],
 /* 1 */ [[2,[0,1]]],

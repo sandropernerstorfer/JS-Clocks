@@ -15,8 +15,8 @@ body{
     background-color: #F5F6F7;
 }
 
-/* Analog-Uhr Container */
-.analog-uhr{
+/* analog clock container */
+.analog-clock{
     position: relative;
     width: 300px;
     height: 300px;
@@ -28,8 +28,8 @@ body{
     background-size: cover;
 }
 
-/* Zeiger */
-.analog-zeiger{
+/* analog hands */
+.analog-hand{
     --rotation: 0deg;
     position: absolute;
     bottom: 50%;
@@ -38,7 +38,7 @@ body{
     z-index: 200;
     transform: translateX(-50%) rotate(var(--rotation));
 }
-.analog-sekunde{
+.analog-second{
     width: 3px;
     height: 45%;
     background-color: crimson;
@@ -48,14 +48,14 @@ body{
     height: 40%;
     background-color: rgb(161, 161, 161);
 }
-.analog-stunde{
+.analog-hour{
     width: 8px;
     height: 35%;
     background-color: #000;
 }
 
-/* Digitale Uhr Container */
-.digital-uhr{
+/* digital clock container */
+.digital-clock{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -66,8 +66,8 @@ body{
     border: 5px solid rgb(148, 145, 145);
 }
 
-/* Stunden - Sekunden - Minuten Container */
-.digital-links, .digital-rechts{
+/* hours, seconds, minutes container */
+.digital-left, .digital-right{
     width: 45%;
     height: 100%;
     padding: 35px;
@@ -75,7 +75,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.digital-mitte{
+.digital-middle{
     width: 10%;
     height: 100%;
     display: flex;
@@ -85,8 +85,8 @@ body{
     padding: 20px 0;
 }
 
-/* Ziffer Container*/
-.digital-stunde, .digital-minute{
+/* digit container*/
+.digital-hour, .digital-minute{
     width: 97px;
     height: 100%;
     display: flex;
@@ -94,8 +94,8 @@ body{
     align-items: center;
 }
 
-/* Seitlichen Balken einer Ziffer */
-.seiten-balken{
+/* left & right digit column */
+.side-column{
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -103,31 +103,31 @@ body{
     flex-direction: column;
     margin: 0 5px;
 }
-/* Einzelne Seitliche Balken */
-.seiten-balken div{
+
+/* individual left & right digit columns */
+.side-column div{
     width: 13px;
     height: 47%;
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 20px;
 }
 
-/* Mittlere Balken einer Ziffer */
-.mittel-balken{
+/* middle digit column */
+.middle-column{
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
-/* Einzelne Mittlere Balken */
-.mittel-balken div{
+/* individual middle digit column */
+.middle-column div{
     width: 50px;
     height: 13px;
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 20px;
 }
 
-/* Sekunden Punkte */
 .second-dot{
     width: 20px;
     height: 20px;
@@ -135,7 +135,6 @@ body{
     border-radius: 50%;
 }
 
-/* Aktiver Grüner Balken */
-.aktiver-balken{
+.active-column{
     background-color: rgb(15, 233, 33) !important;
 }
